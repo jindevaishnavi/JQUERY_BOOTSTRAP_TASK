@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HIDE & SHOW </title>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class = " text-center"> HIDING AND SHOWING THE TEXT</h1>
+<p style="text-align: center;margin-top: 50px"> Click on Hide button to hide me and show to view me again! </p>
+<button id = "hide"  class = "btn border-dark align-self-center" style = "position: absolute; top: 50%; right: 40%">HIDE</button>
+<button id = "show" class = "btn border-dark align-middle"  style = "position: absolute; top: 50%;right: 60%">SHOW</button>
+<script>
+	$("#hide").click(function(){
+		var display =  $("p").css("display");
+    if(display!="none")
+    {
+        $("p").attr("style", "display:none");
+    }
+});
+	$("#show").click(function(){
+		var display =  $("p").css("display");
+    if(display=="none")
+    {
+        $("p").attr("style", "display:block; text-align: center;margin-top: 50px");
+    }
+});
+</script>
+</body>
+</html>
